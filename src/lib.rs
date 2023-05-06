@@ -219,6 +219,11 @@ where
         self
     }
 
+    /// Returns list of currently active columns.
+    pub fn columns(&self) -> Vec<H> {
+        self.columns.iter().map(|c| c.column.clone()).collect()
+    }
+
     /// Adds a column for the specified table colum from type `H` along with
     /// a title for its visual display.
     ///
